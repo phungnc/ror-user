@@ -6,6 +6,8 @@ gem 'rails', '4.1.0'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 group :development, :test do
+	#gem 'rb-fsevent'
+	gem 'guard-livereload'
   gem 'html2haml'
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
