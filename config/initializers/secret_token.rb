@@ -13,4 +13,4 @@ def secure_token
   end
 end
 
-RORUser::Application.config.secret_key_base = secure_token
+PicatCms::Application.config.secret_key_base = secure_token
