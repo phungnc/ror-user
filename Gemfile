@@ -9,6 +9,7 @@ gem 'rails', '4.1.0'
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'sprockets', '2.11.0'
+gem 'bcrypt-ruby', '3.1.2'
 group :development, :test do
 	gem 'rb-fsevent'
 	gem 'guard-livereload'
