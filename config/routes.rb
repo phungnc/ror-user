@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   match '/about', to: 'static_pages#about', via: 'get'
   # User routes
   match '/signup', to: 'users#new', via: 'get'
+  #match '/edit', to: 'users#edit', via: 'get'
   # Sessions routes
   match '/signin', to: 'sessions#new', via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
