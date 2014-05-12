@@ -40,10 +40,22 @@ describe "AuthenticationPages" do
       it { should have_link('Profile', href: user_path(user)) }
       it { should have_link('Sign out', href: signout_path) }
       it { should_not have_link('Sign in', href: signin_path) }
+=begin
+      describe "after saving the user" do
+        before { click_button submit }
+        let(:user) { User.find_by(email: 'capu@gmail.com') }
+
+        it { should have_link('Sign out') }
+        it { should have_title(user.name) }
+        it { should have_selector('div.alert.alert-success', text: 'Welcome') }
+      end
+=end
+      describe "followed by signout" do
+        before { click_link "Sign out" }
+        it { should have_link('Sign in') }
+      end
+
 
     end
-
-
   end
-
 end
