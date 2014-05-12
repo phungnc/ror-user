@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      sign_in @user
       # handle a successfule save.
       flash[:success] = "Welcome to the PitCat CMS"
       redirect_to @user
