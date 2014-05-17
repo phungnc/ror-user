@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-
+  has_many :microposts, dependent: :destroy
   def User.new_remember_token
     SecureRandom.urlsafe_base64
   end
