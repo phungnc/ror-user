@@ -21,7 +21,7 @@ describe "AuthenticationPages" do
       it { should have_selector('div.alert.alert-warning') }
 
       describe "after wisiting another page" do
-        before { click_link "Home" }
+        before { click_link "Picat CMS" }
 
         it { should_not have_selector('div.alert.alert-warning') }
       end
